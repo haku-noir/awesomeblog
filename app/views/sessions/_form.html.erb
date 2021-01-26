@@ -1,0 +1,16 @@
+<main role="main" class="mx-auto w-50">
+    <hr class="my-4">
+    <div class="container">
+        <%= form_for :session, url:'#' do |f| %>
+            <div class="form-group">
+                <%= f.label :email %> <br>
+                <%= f.text_field :email, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= f.label :password %> <br>
+                <%= f.password_field :password, class: 'form-control' %>
+            </div>
+            <%= f.submit 'Log In', class: 'btn btn-outline-primary w-100' %>
+        <% end %>
+    </div>
+</main>
