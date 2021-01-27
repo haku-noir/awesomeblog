@@ -27,6 +27,36 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @topics = [
+      {
+        user: "abc",
+        value: "Hello",
+        date: "1/27"
+      },
+      {
+        user: "abc",
+        value: "Hello",
+        date: "1/27"
+      },
+      {
+        user: "abc",
+        value: "Hello",
+        date: "1/27"
+      },
+      {
+        user: "abc",
+        value: "Hello",
+        date: "1/27"
+      },
+      {
+        user: "abc",
+        value: "Hello",
+        date: "1/27"
+      },
+    ]
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :password)
