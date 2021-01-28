@@ -3,4 +3,5 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 }
   validates :password, allow_nil: true, length: { minimum: 6 }
   has_secure_password
+  has_many :microposts, dependent: :destroy
 end
