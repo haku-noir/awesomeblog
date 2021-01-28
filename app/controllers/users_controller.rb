@@ -32,29 +32,30 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     @posts = [
       {
-        user: "abc",
+        user: @user,
         value: "Hello",
         date: "1/27"
       },
       {
-        user: "abc",
+        user: @user,
         value: "Hello",
         date: "1/27"
       },
       {
-        user: "abc",
+        user: @user,
         value: "Hello",
         date: "1/27"
       },
       {
-        user: "abc",
+        user: @user,
         value: "Hello",
         date: "1/27"
       },
       {
-        user: "abc",
+        user: @user,
         value: "Hello",
         date: "1/27"
       },
