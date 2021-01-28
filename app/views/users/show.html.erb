@@ -3,7 +3,7 @@
         <div class="card mb-3 w-100 bg-info">
             <div class="row no-gutters">
                 <div class="col-3 d-flex align-items-center justify-content-center">
-                    <%= image_tag 'icon.png', class: 'w-100' %>
+                    <%= image_tag gravatar_for(current_user), class: 'w-100' %>
                 </div>
                 <div class="col-4 d-flex align-items-center justify-content-center">
                     <div class="card-body">
@@ -33,7 +33,7 @@
                     <div class="row no-gutters">
                         <div class="col-1"></div>
                         <div class="col-3 d-flex align-items-center justify-content-center">
-                            <%= image_tag 'icon.png', class: 'w-100' %>
+                            <%= image_tag gravatar_for(current_user), class: 'w-100' %>
                         </div>
                         <div class="col-8 d-flex align-items-center justify-content-center">
                             <div class="card-body">
