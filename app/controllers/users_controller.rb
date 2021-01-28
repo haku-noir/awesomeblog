@@ -33,33 +33,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = [
-      {
-        user: @user,
-        value: "Hello",
-        date: "1/27"
-      },
-      {
-        user: @user,
-        value: "Hello",
-        date: "1/27"
-      },
-      {
-        user: @user,
-        value: "Hello",
-        date: "1/27"
-      },
-      {
-        user: @user,
-        value: "Hello",
-        date: "1/27"
-      },
-      {
-        user: @user,
-        value: "Hello",
-        date: "1/27"
-      },
-    ]
+    @microposts = @user.microposts.all
   end
 
   private

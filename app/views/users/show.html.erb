@@ -27,25 +27,25 @@
                 </div>
             </div>
         </div>
-        <div class="card-columns" >
-            <% @posts.each do |post| %>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-1"></div>
-                        <div class="col-3 d-flex align-items-center justify-content-center">
-                            <%= image_tag gravatar_for(@user), class: 'w-100' %>
-                        </div>
-                        <div class="col-8 d-flex align-items-center justify-content-center">
-                            <div class="card-body">
-                                <h5 class="card-title"><%= post[:user].name %></h5>
-                                <p class="card-text"><%= post[:value] %></p>
-                                <p class="card-text"><small class="text-muted"><%= post[:date] %></small></p>
+            <div class="card-columns" >
+                <% @microposts.each do |micropost| %>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-1"></div>
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <%= image_tag gravatar_for(micropost.user), class: 'w-100' %>
+                            </div>
+                            <div class="col-8 d-flex align-items-center justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= micropost.user.name %></h5>
+                                    <p class="card-text"><%= micropost.content %></p>
+                                    <p class="card-text"><small class="text-muted"><%= micropost.created_at %></small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <% end %>
-        </div>
+                <% end %>
+            </div>
     </div>
 </main>
 
