@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @topics = [
+    @posts = [
       {
         user: "abc",
         value: "Hello",
