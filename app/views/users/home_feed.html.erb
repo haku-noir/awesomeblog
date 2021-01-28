@@ -27,14 +27,14 @@
                         </div>
                     </div>
                     <div class="bg-light p-3 w-100">
-                        <%= form_for :session, url: sessions_path do |f| %>
+                        <%= form_for(@micropost) do |f| %>
                             <div class="form-group">
-                                <%= f.text_area :value, rows: 4, placeholder: 'Share your thoughts...', class: 'form-control' %>
+                                <%= f.text_area :content, rows: 4, placeholder: 'Share your thoughts...', class: 'form-control' %>
                             </div>
                             <div class="form-group">
-                                <%= f.file_field :upload_file %>
+                                <%= f.file_field :picture %>
                             </div>
-                            <%= f.submit 'Post', class: 'btn btn-outline-primary w-100' %>
+                            <%= f.submit 'Post', class: 'btn btn-outline-primary btn-block' %>
                         <% end %>
                     </div>
                 </div>
