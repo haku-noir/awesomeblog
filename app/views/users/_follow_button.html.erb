@@ -1,0 +1,9 @@
+<% if current_user.id == user.id %>
+    <button type="button" class="btn btn-success" disabled>Me</button>
+<% else %>
+    <% if current_user.is_follower?(user) %>
+        <%= button_to "Following", relationship_path(user.id), method: :delete, class: 'btn btn-outline-primary' %>
+    <% else %>
+        <%= button_to "Follow", relationships_path({ followed_id: user.id }), class: 'btn btn-primary' %>
+    <% end %>
+<% end %>

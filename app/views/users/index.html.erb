@@ -4,20 +4,21 @@
         <div class="border-top my-3"></div>
         <div class="card-columns" >
             <% @users.each do |user| %>
-                <%= link_to user_path(user), class: 'card mb-3 text-dark', style: 'max-width: 540px; text-decoration: none;' do %>
+                <div class="card mb-3" style="max-width: 540px; text-decoration: none;">
                     <div class="row no-gutters">
                         <div class="col-1"></div>
                         <div class="col-3 d-flex align-items-center justify-content-center">
-                            <%= image_tag gravatar_for(user), class: 'w-100' %>
+                            <%= link_to image_tag(gravatar_for(user), class: 'w-100'), user_path(user) %>
                         </div>
                         <div class="col-8 d-flex align-items-center justify-content-center">
                             <div class="card-body">
-                                <h5 class="card-title"><%= user.name %></h5>
-                                <p class="card-text"><%= user.email %></p>
+                                <h5 class="card-title"><%= link_to user.name, user_path(user), class: 'text-dark' %></h5>
+                                <p class="card-text"><%= link_to user.email, user_path(user), class: 'text-dark' %></p>
+                                <%= render 'follow_button', user: user %>
                             </div>
                         </div>
                     </div>
-                <% end %>
+                </div>
             <% end %>
         </div>
     </div>

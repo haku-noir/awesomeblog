@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
     current_user = User.find(session[:user_id])
     current_user.follow(other_user)
 
-    redirect_to user_url(other_user)
+    redirect_back(fallback_location:  user_url(other_user))
   end
 
   def destroy
@@ -12,6 +12,6 @@ class RelationshipsController < ApplicationController
     current_user = User.find(session[:user_id])
     current_user.unfollow(other_user)
 
-    redirect_to user_url(other_user)
+    redirect_back(fallback_location:  user_url(other_user))
   end
 end
