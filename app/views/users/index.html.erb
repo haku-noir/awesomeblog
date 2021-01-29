@@ -4,7 +4,7 @@
         <div class="border-top my-3"></div>
         <div class="card-columns" >
             <% @users.each do |user| %>
-                <div class="card mb-3" style="max-width: 540px;">
+                <%= link_to user_path(user), class: 'card mb-3 text-dark', style: 'max-width: 540px; text-decoration: none;' do %>
                     <div class="row no-gutters">
                         <div class="col-1"></div>
                         <div class="col-3 d-flex align-items-center justify-content-center">
@@ -17,7 +17,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                <% end %>
             <% end %>
         </div>
     </div>
