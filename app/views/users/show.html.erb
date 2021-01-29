@@ -19,18 +19,7 @@
                     </div>
                 </div>
                 <div class="col-5 d-flex align-items-center justify-content-center text-center">
-                    <div class="w-25 mx-auto">
-                        <h5><%= @user.microposts_count %></h5>
-                        <p>posts</p>
-                    </div>
-                    <div class="w-25 mx-auto">
-                        <h5><%= @user.following_count %></h5>
-                        <p>following</p>
-                    </div>
-                    <div class="w-25 mx-auto">
-                        <h5><%= @user.followers_count %></h5>
-                        <p>followers</p>
-                    </div>
+                    <%= render 'users/user_params', user: @user %>
                 </div>
             </div>
         </div>

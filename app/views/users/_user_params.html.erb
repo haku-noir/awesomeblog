@@ -1,0 +1,21 @@
+<div class="w-25 mx-auto">
+    <h5><%= user.microposts_count %></h5>
+    <% if user.microposts_count == 1 %>
+        <p>post</p>
+    <% else %>
+        <p>posts</p>
+    <% end %>
+</div>
+<div class="w-25 mx-auto">
+    <h5><%= user.following_count %></h5>
+    <p>following</p>
+</div>
+<div class="w-25 mx-auto">
+    <h5><%= user.followers_count %></h5>
+    <% if user.followers_count == 1 %>
+        <p>follower</p>
+    <% else %>
+        <p>followers</p>
+    <% end %>
+    </div>
+</div>
