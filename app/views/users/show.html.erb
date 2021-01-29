@@ -9,6 +9,7 @@
                     <div class="card-body">
                         <h2 class="card-title"><%= @user.name %></h2>
                         <p class="card-text"><%= @user.email %></p>
+                        <%= button_to "Follow", relationships_path({ followed_id: @user.id }), class: 'btn btn-primary' %>
                     </div>
                 </div>
                 <div class="col-5 d-flex align-items-center justify-content-center text-center">
