@@ -36,6 +36,16 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.all
   end
 
+  def followers
+    @user = User.find(params[:id])
+    @followers = User.where(id: @user.follower_ids)
+  end
+
+  def following_users
+    @user = User.find(params[:id])
+    @following_users = User.where(id: @user.following_ids)
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :password)

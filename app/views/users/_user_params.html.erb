@@ -7,14 +7,18 @@
     <% end %>
 </div>
 <div class="w-25 mx-auto">
-    <h5><%= user.following_count %></h5>
-    <p>following</p>
+    <%= link_to following_users_user_path(user), class: 'text-dark' do %>
+        <h5><%= user.following_count %></h5>
+        <p>following</p>
+    <% end %>
 </div>
 <div class="w-25 mx-auto">
-    <h5><%= user.followers_count %></h5>
-    <% if user.followers_count == 1 %>
-        <p>follower</p>
-    <% else %>
-        <p>followers</p>
+    <%= link_to followers_user_path(user), class: 'text-dark' do %>
+        <h5><%= user.followers_count %></h5>
+        <% if user.followers_count == 1 %>
+            <p>follower</p>
+        <% else %>
+            <p>followers</p>
+        <% end %>
     <% end %>
 </div>

@@ -36,6 +36,14 @@ class User < ApplicationRecord
     microposts.count
   end
 
+  def follower_ids
+    Relationship.where(followed_id: id).select(:follower_id)
+  end
+
+  def following_ids
+    Relationship.where(follower_id: id).select(:followed_id)
+  end
+
   def followers_count
     Relationship.where(followed_id: id).count
   end
