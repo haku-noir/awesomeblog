@@ -14,16 +14,16 @@
                     </div>
                     <div class="d-flex align-items-center justify-content-center text-center">
                         <div class="w-25 mx-auto">
-                            <h5>10</h5>
-                            <p>posts</p>
-                        </div>
-                        <div class="w-25 mx-auto">
-                            <h5>5</h5>
-                            <p>following</p>
-                        </div>
-                        <div class="w-25 mx-auto">
-                            <h5>3</h5>
-                            <p>followers</p>
+                        <h5><%=current_user.microposts_count %></h5>
+                        <p>posts</p>
+                    </div>
+                    <div class="w-25 mx-auto">
+                        <h5><%=current_user.following_count %></h5>
+                        <p>following</p>
+                    </div>
+                    <div class="w-25 mx-auto">
+                        <h5><%=current_user.followers_count %></h5>
+                        <p>followers</p>
                         </div>
                     </div>
                     <div class="bg-light p-3 w-100">

@@ -31,4 +31,16 @@ class User < ApplicationRecord
 
     return !relationship.nil?
   end
+
+  def microposts_count
+    microposts.count
+  end
+
+  def followers_count
+    Relationship.where(followed_id: id).count
+  end
+
+  def following_count
+    Relationship.where(follower_id: id).count
+  end
 end
